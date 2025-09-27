@@ -334,7 +334,7 @@ class SpikingConv:
                 self.pot[winners_mask] = self.v_reset
                 self.active_neurons[winners_mask] = False
                 nonwin_mask = spk_out.astype(bool) & (~winners_mask)
-                spk_out[nonwin_mask]=0
+                #spk_out[nonwin_mask]=0(是否将非赢家但原本要放电的神经元输出脉冲（即传入下一层的输入序列）置0，不影响结果）
 
         return spk_out
     
