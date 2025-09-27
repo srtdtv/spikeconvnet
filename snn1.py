@@ -7,7 +7,7 @@ from torch.nn.functional import conv2d, max_pool2d
 
 from utils import load_encoded_MNIST
 
-#准确率为0.925，样本平均发放脉冲为4600左右，stdp大概在700左右收敛
+#准确率为0.925，样本平均发放脉冲为4600左右，stdp大概在700左右收敛 
 """
 Implementation of the paper STDP-based spiking deep neural networks for object recognition
 for the MNIST classification task.
