@@ -8,6 +8,7 @@ from torch.nn.functional import conv2d, max_pool2d
 from utils import load_encoded_MNIST
 
 #在snn1的基础上将侧抑制使用指数衰减改为减去阈值倍数（即建立连接减去连接权重），准确率为0.923，600/700左右收敛，样本平均发放脉冲为4560
+#将初始权重中心调到0.5，准确率变为0.935，样本平均发放脉冲数下降到2788
 """
 Implementation of the paper STDP-based spiking deep neural networks for object recognition
 for the MNIST classification task.
@@ -481,3 +482,4 @@ def main(
 if __name__ == "__main__":
 
     main()
+
